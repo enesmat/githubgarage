@@ -1,0 +1,21 @@
+name: Auto-Check Workflow 
+
+on:
+    workflow_dispatch:
+
+jobs:
+  CheckEngine:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Repository klonen
+    - name: Clone Repository
+      run: git clone https://github.com/enesmat/githubgarage.git
+
+    # Shell-Skript ausführen
+    - name: Run script.sh
+      run: |
+        ls -la
+        chmod +x ./script.sh
+        ls -la
+        ./script.sh
