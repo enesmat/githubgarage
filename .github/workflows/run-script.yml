@@ -15,6 +15,7 @@ jobs:
     # Shell-Skript ausführen
     - name: Run script.sh
       run: |
+        cd githubgarage
         ls -la
         chmod +x ./script.sh
         ls -la
